@@ -1,0 +1,59 @@
+h1,
+h2,
+h3,
+p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+#ptp {
+    font-size: 30px;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+body {
+    color: rgb(25, 143, 143);
+    color-scheme: dark;
+    background-color: hsl(228, 5%, 15%);
+    width: 100%;
+    height: 100%;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 45px 45px;
+}
+
+
+.svg-container {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #00ff62;
+}
+
+.rect-outline {
+    fill: none;
+    stroke: #00FF62;
+    stroke-width: 2;
+}
+
+#res {
+    padding-top: 80px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sliders {
+    text-align: center;
+}
+
+.btn{
+    text-align: center;
+}
