@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <title>Res Vs Inch</title>
+    <title>R.I.P.</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-con" href="icons/lcd.png" <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <div class="container"></div>
@@ -25,41 +25,42 @@
             <div>
                 <h3 id="title">Resolution</h3>
                 <p id="pp">The number of pixel wide and high that make up the screen</p>
-                <p>e.g. 1920x1080 = 2,073,600 which is the total pixel count</p>
+                <p>e.g. 1920x1080 is the resolution and 2,073,600 which is the total pixel count when values are
+                    multiplied</p>
             </div>
             <div>
-                <h3>Pixels Per Inch</h3>
+                <h3>Pixels Per Inch (PPI)</h3>
                 <p>The amount of pixels packed per inch,</p>
                 <p>e.g. 400 PPI means 400 pixels for every inch</p>
             </div>
             <div>
-                <h3>How do they all affect one another?</h3>
-                <p>...</p>
+
             </div>
         </div>
     </header>
     <main>
-        <button id="reset-button" class="btn">Reset</button>
+        <button id="reset-button">Reset</button>
         <p id="res">Resolution:
             <span id="res-width-value" class="clickable"></span>x<span id="res-height-value" class="clickable"></span>
         </p>
         <!-- Rectangle SVG-->
         <svg id="rectangle-svg" class="svg-container" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
             <rect class="rect-outline" x="0" y="0" width="1920" height="1080" id="rect" />
-            <text x="960" y="540" class="center-text" fill="red" text-anchor="middle">inc <tspan id="inc-value" class="clickable"></tspan></text>
+            <text x="960" y="540" class="center-text" fill="red" text-anchor="middle">inc <tspan id="inc-value"
+                    class="clickable"></tspan>"</text>
         </svg>
         <div class="sliders">
             <label>Inches:<span id="inc-value"></span></label>
             <input id="inc-width" type="range" class="slider" min="0" max="146" value="24">
-    
+
             <label>Resolution Width:<span id="res-width-value"></span></label>
             <input id="res-width" type="range" class="slider" min="0" max="7680" value="1920">
-    
+
             <label>Resolution Height:<span id="res-height-value"></span></label>
             <input id="res-height" type="range" class="slider" min="0" max="4320" value="1080">
-    
+
             <div id="pixel-count">Total Pixels:<span id="total-pixels"></span></div>
-    
+
             <div id="ppi">PPI:<span id="ppi-value"></span></div>
         </div>
     </main>

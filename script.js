@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         svg.setAttribute('width', width * scale);
         svg.setAttribute('height', height * scale);
         svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+        
     }
 
     // Click and edit function 
@@ -78,6 +79,9 @@ document.addEventListener('DOMContentLoaded', function () {
         resHeightSlider.value = 1080;
         updateDisplays(); 
     });
+
+
+    
 
     // Make the text clickable
     click(resWidthDisplay, resWidthSlider, 'Width');
