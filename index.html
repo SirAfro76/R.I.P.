@@ -40,29 +40,41 @@
         </div>
     </header>
     <main>
-        <button id="reset-button">Reset</button>
-        <p id="res">Resolution:
-            <span id="res-width-value" class="clickable"></span>x<span id="res-height-value" class="clickable"></span>
-        </p>
-        <!-- Rectangle SVG-->
-        <svg id="rectangle-svg" class="svg-container" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
-            <rect class="rect-outline" x="0" y="0" width="1920" height="1080" id="rect" />
-            <text x="960" y="540" class="center-text" fill="red" text-anchor="middle">inc <tspan id="inc-value"
-                    class="clickable"></tspan>"</text>
-        </svg>
-        <div class="sliders">
+        <div>
+            <button id="reset-button">Reset</button>
+        </div>
+        <div>
+            <p id="res">Resolution:
+                <span id="res-width-value" class="clickable"></span>x<span id="res-height-value"class="clickable"></span>
+            </p>
+        </div>
+        <div>
+            <svg id="rectangle-svg" class="svg-container" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+                <rect class="rect-outline" x="0" y="0" width="1920" height="1080" id="rect" />
+                <text x="960" y="540" class="center-text" fill="red" text-anchor="middle">inc<tspan id="inc-value"class="clickable"></tspan>"</text>
+            </svg>
+        </div>
+        <div>
             <label>Inches:<span id="inc-value"></span></label>
             <input id="inc-width" type="range" class="slider" min="0" max="146" value="24">
+        </div>
+        <div>
 
-            <label>Resolution Width:<span id="res-width-value"></span></label>
+            <label>Width:<span id="res-width-value"></span></label>
             <input id="res-width" type="range" class="slider" min="0" max="7680" value="1920">
+        </div>
+        <div>
 
-            <label>Resolution Height:<span id="res-height-value"></span></label>
+            <label>Height:<span id="res-height-value"></span></label>
             <input id="res-height" type="range" class="slider" min="0" max="4320" value="1080">
-
+        </div>
+        <div>
             <div id="pixel-count">Total Pixels:<span id="total-pixels"></span></div>
 
+        </div>
+        <div>
             <div id="ppi">PPI:<span id="ppi-value"></span></div>
+
         </div>
     </main>
 </body>

@@ -4,16 +4,28 @@ function loadscript() {
 loadscript();
 
 document.addEventListener('DOMContentLoaded', function () {
+    
+    // Sliders 
     const incWidthSlider = document.getElementById('inc-width');
     const resWidthSlider = document.getElementById('res-width');
     const resHeightSlider = document.getElementById('res-height');
+
+    // Rect Outline 
     const rect = document.querySelector('.rect-outline');
+
+    // Values 
     const incValueDisplay = document.getElementById('inc-value');
     const resWidthDisplay = document.getElementById('res-width-value');
     const resHeightDisplay = document.getElementById('res-height-value');
+
+    // Total Pixels 
     const totalPixelsDisplay = document.getElementById('total-pixels');
+
+    // PPI Value 
     const ppiDisplay = document.getElementById('ppi-value');
+
     const svg = document.getElementById('rectangle-svg');
+
     const resetButton = document.getElementById('reset-button');
 
 
@@ -42,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Scaling
         const aspectRatio = width / height;
         const maxWidth = window.innerWidth - 20;
-        const maxHeight = window.innerHeight - 100; 
+        const maxHeight = window.innerHeight - 100;
 
         // Calculate scale based on dimensions
         let scale = 1;
@@ -54,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         svg.setAttribute('width', width * scale);
         svg.setAttribute('height', height * scale);
         svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
-        
+
     }
 
     // Click and edit function 
@@ -63,9 +75,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const currentValue = parseFloat(element.textContent);
             const newValue = prompt(`Enter new value for ${label}`, currentValue);
             if (newValue !== null) {
-                const roundedValue = Math.round(newValue); 
+                const roundedValue = Math.round(newValue);
                 element.textContent = roundedValue;
-                slider.value = roundedValue; 
+                slider.value = roundedValue;
                 updateDisplays();
             }
         });
@@ -73,15 +85,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Reset Button 
     resetButton.addEventListener('click', () => {
-        
+
         incWidthSlider.value = 24;
         resWidthSlider.value = 1920;
         resHeightSlider.value = 1080;
-        updateDisplays(); 
+        updateDisplays();
     });
 
 
-    
+
 
     // Make the text clickable
     click(resWidthDisplay, resWidthSlider, 'Width');
