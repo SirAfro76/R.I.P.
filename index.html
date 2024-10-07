@@ -19,15 +19,17 @@
             </div>
             <div>
                 <h3 id="title">Inch</h3>
-                <p id="pp">The distance measured from top left corner to bottom right, a diagonal line. Its the size
-                    of the screen, not to confuse with resolution</p>
+                <p id="pp">The distance measured from top left corner to
+                    bottom right, a diagonal line. Its the size of the
+                    screen, not to confuse with resolution</p>
                 <p>e.g. 24 inches = 60.96cm </p>
             </div>
             <div>
                 <h3 id="title">Resolution</h3>
-                <p id="pp">The number of pixel wide and high that make up the screen</p>
-                <p>e.g. 1920x1080 is the resolution and 2,073,600 which is the total pixel count when values are
-                    multiplied</p>
+                <p id="pp">The number of pixel wide and high that make up
+                    the </p>
+                <p>e.g. 1920x1080 is the resolution and 2,073,600 which is
+                    the total pixel count when values are multiplied</p>
             </div>
             <div>
                 <h3>Pixels Per Inch (PPI)</h3>
@@ -35,7 +37,6 @@
                 <p>e.g. 400 PPI means 400 pixels for every inch</p>
             </div>
             <div>
-
             </div>
         </div>
     </header>
@@ -45,36 +46,42 @@
         </div>
         <div>
             <p id="res">Resolution:
-                <span id="res-width-value" class="clickable"></span>x<span id="res-height-value"class="clickable"></span>
+                <span id="res-width-value" class="clickable"></span>x<span id="res-height-value"
+                    class="clickable"></span>
             </p>
         </div>
         <div>
-            <svg id="rectangle-svg" class="svg-container" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+            <svg id="rect-svg" class="svg-container" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
                 <rect class="rect-outline" x="0" y="0" width="1920" height="1080" id="rect" />
-                <text x="960" y="540" class="center-text" fill="red" text-anchor="middle">inc<tspan id="inc-value"class="clickable"></tspan>"</text>
+                <text x="960" y="540" class="center-text" fill="red" text-anchor="middle">inc<tspan id="inc-value"
+                        class="clickable"></tspan></text>
             </svg>
         </div>
         <div>
-            <label>Inches:<span id="inc-value"></span></label>
-            <input id="inc-width" type="range" class="slider" min="0" max="146" value="24">
+            <label>Inc Diagonal:<span id="inc-diag"></span></label>
+            <input id="inc-diag-value" type="range" class="slider" min="0" max="9000" value="24">
         </div>
         <div>
-
-            <label>Width:<span id="res-width-value"></span></label>
-            <input id="res-width" type="range" class="slider" min="0" max="7680" value="1920">
+            <label>Inc Height:<span id="inc-height"></span></label>
+            <input id="inc-height-value" type="range" class="slider" min="0" max="9000" value="11.7 ">
         </div>
         <div>
-
-            <label>Height:<span id="res-height-value"></span></label>
-            <input id="res-height" type="range" class="slider" min="0" max="4320" value="1080">
+            <label>Inc Width:<span id="inc-width-value"></span></label>
+            <input id="inc-width-value" type="range" class="slider" min="0" max="9000" value="24">
+        </div>
+        <div>
+            <label>Res Width:<span id="res-width"></span></label>
+            <input id="res-width-value">
+        </div>
+        <div>
+            <label>Res height:<span id="res-height"></span></label>
+            <input id="res-height-value">
         </div>
         <div>
             <div id="pixel-count">Total Pixels:<span id="total-pixels"></span></div>
-
         </div>
         <div>
             <div id="ppi">PPI:<span id="ppi-value"></span></div>
-
         </div>
     </main>
 </body>
