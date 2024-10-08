@@ -22,43 +22,26 @@ if ("serviceWorker" in navigator) {
     console.log("Service worker is not supported.");
 }
 
-// ██╗   ██╗ █████╗ ██████╗ ███████╗
-// ██║   ██║██╔══██╗██╔══██╗██╔════╝
-// ██║   ██║███████║██████╔╝███████╗
-// ╚██╗ ██╔╝██╔══██║██╔══██╗╚════██║
-//  ╚████╔╝ ██║  ██║██║  ██║███████║
-//   ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝
 
 // Inches Overall                                        
-const inches = document.getElementById('inc-diag-display');
+const inches = document.getElementById('inc-diag-value');
 const inc_value = document.getElementById('inc-diag');
+const centre_text = document.getElementById('inc-diag-ct');
 
 // Svg
 const rect = document.getElementById('rect-outline');
+rect_width = rect.getAttribute('width');
+rect_height = rect.getAttribute('height');
 
 
-
-// ███████╗██╗   ██╗███╗   ██╗ ██████╗███████╗
-// ██╔════╝██║   ██║████╗  ██║██╔════╝██╔════╝
-// █████╗  ██║   ██║██╔██╗ ██║██║     ███████╗
-// ██╔══╝  ██║   ██║██║╚██╗██║██║     ╚════██║
-// ██║     ╚██████╔╝██║ ╚████║╚██████╗███████║
-// ╚═╝      ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝╚══════╝
-
+// Functions 
 function mod_inch() {
     const new_inc_val = parseFloat(inches.value);
-    inc_value.textContent = `${new_inc_val}`;
+    inc_value.textContent = ` ${new_inc_val}"`;
+    centre_text.textContent = ` ${new_inc_val}"`;
 }
+
+
 mod_inch();
-
-
-
-// ███████╗██╗   ██╗███████╗███╗   ██╗████████╗███████╗
-// ██╔════╝██║   ██║██╔════╝████╗  ██║╚══██╔══╝██╔════╝
-// █████╗  ██║   ██║█████╗  ██╔██╗ ██║   ██║   ███████╗
-// ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║╚██╗██║   ██║   ╚════██║
-// ███████╗ ╚████╔╝ ███████╗██║ ╚████║   ██║   ███████║
-// ╚══════╝  ╚═══╝  ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
-
-
 inches.addEventListener('input', mod_inch)
+

@@ -2,43 +2,55 @@
 <html lang="en">
 
 <head>
-    <title>R.I.P.</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <title>Monitor Breakdown</title>
+    <link rel="stylesheet" href="/src/css/stylesheet.css">
     <link rel="icon" type="image/x-con" href="icons/lcd.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <div class="container"></div>
 
 <body>
     <header>
         <div id="information">
             <div>
-                <h1>Resolution, Inches & PPI</h1>
+                <h1>Monitor For Dummies</h1>
                 <p id="ptp">Whats the difference?</p>
             </div>
             <div>
                 <h3 id="title">Inch</h3>
-                <p id="pp">The distance measured from top left corner to
-                    bottom right, a diagonal line. Its the size of the
-                    screen, not to confuse with resolution</p>
+                <p id="pp">The distance measured from top left corner to bottom right, a diagonal line. Its the size of thescreen, not to confuse with resolution</p>
                 <p>e.g. 24 inches = 60.96cm </p>
             </div>
             <div>
                 <h3 id="title">Resolution</h3>
-                <p id="pp">The number of pixel wide and high that make up
-                    the </p>
-                <p>e.g. 1920x1080 is the resolution and 2,073,600 which is
-                    the total pixel count when values are multiplied</p>
+                <p id="pp">The number of pixel wide and high that make up the </p>
+                <p>e.g. 1920x1080 is the resolution and 2,073,600 which is the total pixel count when values are multiplied</p>
             </div>
             <div>
                 <h3>Pixels Per Inch (PPI)</h3>
-                <p>The amount of pixels packed per inch,</p>
-                <p>e.g. 400 PPI means 400 pixels for every inch</p>
+                <p>The amount of pixels packed per inch</p>
+                <p>e.g. 400 PPI means 400 pixels for every 1 inch</p>
             </div>
             <div>
+                <h3>Aspect Ratio</h3>
             </div>
-        </div>
+            <div>
+                <h3>Adaptive Sync Technologies</h3>
+            </div>
+            <div>
+                <h3>Panel Types</h3>
+            </div>
+            <div>
+                <h3>Refresh Rate (Hertz)</h3>
+            </div>
+            <div>
+                <h3>Color Depth</h3>
+            </div>
+            <div>
+                <h3>Response Time (ms)</h3>
+            </div>
     </header>
     <main>
         <div>
@@ -46,36 +58,40 @@
         </div>
         <div>
             <p id="res">Resolution:
-                <span id="res-width-value" class="clickable"></span>x<span id="res-height-value"
-                    class="clickable"></span>
+                <span id="res-width-value" class="clickable"></span>x
+                <span id="res-height-value" class="clickable"></span>
             </p>
         </div>
         <div>
-            <svg id="rect-svg" class="svg-container" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+            <svg id="rect-svg" class="svg-container" width="1920" height="1080">
                 <rect class="rect-outline" x="0" y="0" width="1920" height="1080" id="rect" />
-                <text x="960" y="540" class="center-text" fill="red" text-anchor="middle">inc<tspan id="inc-value"
-                        class="clickable"></tspan></text>
+                <text x="960" y="540" class="center-text" fill="red" text-anchor="middle">inc
+                    <tspan id="inc-diag-ct" class="clickable"></tspan>
+                </text>
             </svg>
         </div>
         <div>
             <label>Inc Diagonal:<span id="inc-diag"></span></label>
-            <input id="inc-diag-value" type="range" class="slider" min="0" max="9000" value="24">
+            <input id="inc-diag-value" type="range" step="1" min="1" max="100" value="24">
         </div>
         <div>
             <label>Inc Height:<span id="inc-height"></span></label>
-            <input id="inc-height-value" type="range" class="slider" min="0" max="9000" value="11.7 ">
+            <input id="inc-height-value" type="range" step="1" min="0" max="7680" value="11.7 ">
         </div>
         <div>
             <label>Inc Width:<span id="inc-width-value"></span></label>
-            <input id="inc-width-value" type="range" class="slider" min="0" max="9000" value="24">
+            <input id="inc-width-value" type="range" step="1" min="0" max="7680" value="24">
         </div>
         <div>
             <label>Res Width:<span id="res-width"></span></label>
-            <input id="res-width-value">
+            <input type="range" id="res-width-value">
         </div>
         <div>
             <label>Res height:<span id="res-height"></span></label>
-            <input id="res-height-value">
+            <input type="range" id="res-height-value">
+        </div>
+        <div>
+            <label>Aspect Ratio:<span id="aspect-ratio"></span></label>
         </div>
         <div>
             <div id="pixel-count">Total Pixels:<span id="total-pixels"></span></div>
